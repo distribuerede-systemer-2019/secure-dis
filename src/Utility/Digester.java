@@ -8,6 +8,9 @@ public class Digester {
     private String salt;
     private static MessageDigest digester;
 
+    public Digester() {
+        this.salt = "test";
+    }
     static {
         try {
             digester = MessageDigest.getInstance("MD5");
@@ -17,6 +20,7 @@ public class Digester {
     }
 
     public void setSalt(String salt) {
+
         this.salt = salt;
     }
 
@@ -26,6 +30,7 @@ public class Digester {
      * @return MD5 hash of string
      */
     public  String hash(String str) {
+
         return Digester.performHashing(str);
     }
 
@@ -36,17 +41,23 @@ public class Digester {
      */
     public String hashWithSalt(String str){
 
-        //TODO: Implement this
-        return "";
+        //Alternativ løsningsforslag - Andys løsning
+        // String test = Digester.performHashing(str + "prøve");
+        // return test;
+
+        str = str + this.salt;
+
+        return Digester.performHashing(str);
     }
 
     /**
      * Performing MD5 hashing of string
-     * @param str input
+     * @param test input
      * @return MD5 hash of string
      */
-    private static String performHashing(String str){
-        digester.update(str.getBytes());
+    private static String performHashing(String test){
+        // vigtigste metode, som laver hash for os
+        digester.update(test.getBytes());
         byte[] hash = digester.digest();
         StringBuilder hexString = new StringBuilder();
         for (byte aHash : hash) {
