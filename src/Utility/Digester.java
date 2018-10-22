@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 
 public class Digester {
 
-    private String salt;
+    private String salt = "ThisIsMySalt!";
     private static MessageDigest digester;
 
     static {
@@ -36,8 +36,7 @@ public class Digester {
      */
     public String hashWithSalt(String str){
 
-        //TODO: Implement this
-        return "";
+        return Digester.performHashing(str+this.salt);
     }
 
     /**
