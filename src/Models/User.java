@@ -1,9 +1,6 @@
 package Models;
 
-import Utility.Digester;
-
 import java.util.ArrayList;
-
 
 public class User {
 
@@ -16,13 +13,11 @@ public class User {
     }
 
     public void setUsername(String username) {
-
         this.username = username;
     }
 
     public void setPassword(String password) {
-        Digester digester = new Digester();
-        this.password = digester.hashWithSalt(password);
+        this.password = password;
     }
 
     public void setSkill(String skill) {
