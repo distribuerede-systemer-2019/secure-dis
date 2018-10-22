@@ -47,7 +47,7 @@ public class ResponseHandler implements Runnable {
             User user1 = new User();
             user1.setUsername("killerxp2000");
             user1.setPassword("1234");
-            user1.setSkill(Encryption.encryptDecryptXOR("fodbold"));
+            user1.setSkill(Encryption.encryptDecryptXOR(Encryption.encryptDecryptXOR("fodbold")));
             user1.setSkill("hockey");
             user1.setSkill("golf");
 

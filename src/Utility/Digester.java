@@ -5,8 +5,12 @@ import java.security.MessageDigest;
 
 public class Digester {
 
-    private String salt = "ThisIsMySalt!";
+    private String salt;
     private static MessageDigest digester;
+
+    public Digester() {
+        this.salt = "S4l7";
+    }
 
     static {
         try {
@@ -35,7 +39,6 @@ public class Digester {
      * @return MD5 hashed of string
      */
     public String hashWithSalt(String str){
-
         return Digester.performHashing(str+this.salt);
     }
 

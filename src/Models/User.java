@@ -1,5 +1,7 @@
 package Models;
 
+import Utility.Digester;
+
 import java.util.ArrayList;
 
 public class User {
@@ -17,7 +19,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = new Digester().hashWithSalt(password);
     }
 
     public void setSkill(String skill) {
