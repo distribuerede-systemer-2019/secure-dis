@@ -39,13 +39,10 @@ er muligt at finde i databasen.
 #### 5. Opgave
 I Encryption-klassen kan vi kryptere strenge ud fra en given key. 
 
-Tænk over hvad forskellen på kryptering og hashing er.
+I ReponseHandler på linje 50 krypteres ordet "fodbold". Dekrypter dette uden at slette noget fra den oprindelige linje. Du må gerne tilføje.
 
-Hvorfor er det vigtigt at en hash altid har samme længde?
+Tænk over hvad forskellen på kryptering og hashing er. Er det muligt at gøre det samme som ovenstående med hashing? Altså få en hashet værdi tilbage til det originale?
 
 Hvorfor bruges hashing ofte til passwords?
 
-I ReponseHandler på linje 50 krypteres ordet "fodbold". Dekrypter dette uden at slette noget fra den oprindelige linje. Du må gerne tilføje.
-
-Ovenstående er en XOR-kryptering. Hvordan fungerer denne?
-
+Hvorfor er det vigtigt at en hash altid har samme længde?
