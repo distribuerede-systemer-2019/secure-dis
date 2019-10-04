@@ -30,7 +30,7 @@ Din opgave er at lave `setPassword()` metoden i `User`-klassen om til at den i s
 Du bestemmer selv hvad dit SALT skal være, og hvordan du generere det (hvis du bruger `hashWithSalt`())
 
 #### 4. Opgave
-Kør nu din Server igen, og se den hashede udgave at det password du valgte. Prøv at se om dit password
+Kør nu din Server igen, send en get-request med f.eks. Postman og se den hashede udgave at det password du valgte.
 kan findes i rainbow-tabllerne på https://md5.gromweb.com/.
 
 Hvis din hash kan findes, eksperimenter med at tilføje et tilpas avanceret SALT ind til det ikke længere
